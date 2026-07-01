@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Plataforma de experiencias turísticas sostenibles en la Región de Aysén"
+    />
+    <title>Experiencias Sostenibles de Aysén</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Turismo sostenible • Patagonia chilena</p>
+        <h1>Descubre Aysén con responsabilidad</h1>
+        <p>
+          Conectamos a viajeros con experiencias únicas, de bajo impacto y con
+          cupos controlados en la Región de Aysén.
+        </p>
+        <nav class="hero__nav" aria-label="Navegación principal">
+          <a href="#experiencias">Experiencias</a>
+          <a href="#reservar">Reservar</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="experiencias" class="section">
+        <div class="section__header">
+          <div>
+            <p class="eyebrow">Experiencias destacadas</p>
+            <h2>Elige tu próxima aventura</h2>
+          </div>
+          <p>
+            Cada propuesta respeta el territorio, limita el impacto y cuida la
+            naturaleza de la región.
+          </p>
+        </div>
+
+        <div class="filtros" role="group" aria-label="Filtrar experiencias por categoría">
+          <button class="filtro active" data-categoria="todas" aria-pressed="true">Todas</button>
+          <button class="filtro" data-categoria="Navegación" aria-pressed="false">Navegación</button>
+          <button class="filtro" data-categoria="Trekking" aria-pressed="false">Trekking</button>
+          <button class="filtro" data-categoria="Kayak" aria-pressed="false">Kayak</button>
+          <button class="filtro" data-categoria="Pesca" aria-pressed="false">Pesca</button>
+          <button class="filtro" data-categoria="Circuito" aria-pressed="false">Circuito</button>
+        </div>
+
+        <div id="experienciasGrid" class="experiencias-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="reservar" class="section reservar-section">
+        <div class="section__header">
+          <div>
+            <p class="eyebrow">Reserva tu experiencia</p>
+            <h2>Completa el formulario</h2>
+          </div>
+          <p>
+            Tu reserva ayuda a gestionar mejor los cupos y a preservar el entorno.
+          </p>
+        </div>
+
+        <form id="formReserva" class="formulario" novalidate>
+          <div class="form-grid">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="nombre" type="text" required />
+              <p class="error" id="error-nombre" role="alert"></p>
+            </div>
+
+            <div class="campo">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" required />
+              <p class="error" id="error-email" role="alert"></p>
+            </div>
+
+            <div class="campo">
+              <label for="experiencia">Experiencia a reservar</label>
+              <select id="experiencia" name="experiencia" required></select>
+              <p class="error" id="error-experiencia" role="alert"></p>
+            </div>
+
+            <div class="campo">
+              <label for="cantidad">Cantidad de personas</label>
+              <input id="cantidad" name="cantidad" type="number" min="1" required />
+              <p class="error" id="error-cantidad" role="alert"></p>
+            </div>
+
+            <div class="campo">
+              <label for="fecha">Fecha deseada</label>
+              <input id="fecha" name="fecha" type="date" required />
+              <p class="error" id="error-fecha" role="alert"></p>
+            </div>
+          </div>
+
+          <button type="submit" class="boton-principal">Reservar ahora</button>
+          <p id="mensajeExito" class="mensaje-exito" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer id="contacto" class="footer">
+      <p>Patagonia Aysén Sostenible © 2026</p>
+      <p>Reservas responsables para cuidar la naturaleza.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- Código generado con IA -->
